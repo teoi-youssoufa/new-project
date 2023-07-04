@@ -1,20 +1,14 @@
-import logging
+def login(username, password):
+    if username == "admin" and password == "password":
+        return True
+    else:
+        return False
 
-def main():
-    # Set up logging configuration
-    logging.basicConfig(
-        level=logging.INFO,
-        format="%(asctime)s [%(levelname)s] %(message)s",
-        handlers=[
-            logging.StreamHandler(),
-            logging.FileHandler("app.log")
-        ]
-    )
+# Example usage
+username = input("Enter your username: ")
+password = input("Enter your password: ")
 
-    # Log some messages
-    logging.info("Application started")
-    logging.warning("This is a warning message")
-    logging.error("An error occurred")
-
-if __name__ == "__main__":
-    main()
+if login(username, password):
+    print("Login successful")
+else:
+    print("Invalid username or password")
