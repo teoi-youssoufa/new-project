@@ -1,3 +1,7 @@
+"""
+This module provides a login function to check if the provided username and password are valid.
+"""
+
 def login(username, password):
     """
     Check if the provided username and password are valid.
@@ -19,3 +23,4 @@ if login(username, password):
     print("Login successful")
 else:
     print("Invalid username or password")
+
