@@ -16,18 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Lint code
-        run: |
-          pip install flake8
-          flake8 .
-
-      - name: Run tests
-        run: pytest
+      - name: Run Super Linter
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: true
