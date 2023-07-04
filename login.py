@@ -1,8 +1,15 @@
 def login(username, password):
-    if username == "admin" and password == "password":
-        return True
-    else:
-        return False
+    """
+    Check if the provided username and password are valid.
+
+    Args:
+        username (str): The username to check.
+        password (str): The password to check.
+
+    Returns:
+        bool: True if the username and password are correct, False otherwise.
+    """
+    return bool(username == "admin" and password == "password")
 
 # Example usage
 username = input("Enter your username: ")
@@ -12,4 +19,3 @@ if login(username, password):
     print("Login successful")
 else:
     print("Invalid username or password")
-
