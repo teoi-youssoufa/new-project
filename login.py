@@ -1,26 +1,10 @@
-"""
-This module provides a login function to check if the provided username and password are valid.
-"""
-
-def login(username, password):
-    """
-    Check if the provided username and password are valid.
-
-    Args:
-        username (str): The username to check.
-        password (str): The password to check.
-
-    Returns:
-        bool: True if the username and password are correct, False otherwise.
-    """
-    return bool(username == "admin" and password == "password")
+def calculate_sum(a, b):
+    return a + b
 
 # Example usage
-username = input("Enter your username: ")
-password = input("Enter your password: ")
+num1 = 10
+num2 = 20
 
-if login(username, password):
-    print("Login successful")
-else:
-    print("Invalid username or password")
+result = calculate_sum(num1, num2)
+print("The sum is:", result)
 
